@@ -66,7 +66,7 @@ const apiRes = {
 
 describe('Movies api', () => {
   describe('searchMovies', () => {
-    it('shoudl return movies with searched query ', async () => {
+    it('should return movies with searched query ', async () => {
       mockedApi.get.mockResolvedValue({
         data: apiRes
       })
@@ -76,9 +76,7 @@ describe('Movies api', () => {
       expect(api.get).toHaveBeenCalledWith('/search/movie?query=naruto&page=1')
       expect(movies).toEqual(apiRes)
     })
-  })
 
-  describe('when API call fails', () => {
     it('should return network error', async () => {
       const message = 'Network Error'
       mockedApi.get.mockRejectedValue(new Error(message))

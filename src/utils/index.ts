@@ -13,38 +13,37 @@ export function generatePagination(
   size = 20,
   pageToShow = 10
 ) {
-  if (!totalItems) return []
+  /** Return empty if there is no totalItems to count */
+  if (!totalItems || totalItems === 0) return []
+
   const maxPage = Math.ceil(totalItems / size)
-  const halfPage = pageToShow / 2
+  /** Rounds up halfPage, to prevent decimal number when pageToShow is odd number */
+  const halfPage = Math.ceil(pageToShow / 2)
+
   let smallestPage = halfPage < currentPage ? currentPage - halfPage : 1
   let biggestPage =
     halfPage > currentPage ? pageToShow : currentPage + halfPage - 1
 
+  /** Prevent smallestPage to have negative value */
   if (smallestPage < 1) smallestPage = 1
+  /** Prevent biggestPage to have bigger value than max page */
   if (biggestPage > maxPage) biggestPage = maxPage
 
-  let pages = Array.from(
+  const pages = Array.from(
     { length: maxPage > pageToShow ? pageToShow : maxPage },
-    (_, i) => ({ page: i + 1, pageUrl: '' })
-  )
-  pages = pages.map((_, index) => {
-    const page = smallestPage + index
-    const indexMark = url.indexOf('?')
-    const searchParams = new URLSearchParams(url.substring(indexMark))
-    searchParams.set('p', page.toString())
-
-    return {
-      page,
-      pageUrl: generatePageUrl(url, page)
+    (_, index) => {
+      const page = smallestPage + index
+      return { page: index + 1, pageUrl: generatePageUrl(url, page) }
     }
-  })
+  )
 
   return pages
 }
 
 export function generatePageUrl(url: string, page: number) {
-  const indexMark = url.indexOf('?')
-  const searchParams = new URLSearchParams(url.substring(indexMark))
+  const questionMarkIndex = url.indexOf('?')
+  const searchParams = new URLSearchParams(url.substring(questionMarkIndex))
   searchParams.set('p', page.toString())
-  return `${url.substring(0, indexMark)}?${searchParams.toString()}`
+
+  return `${url.substring(0, questionMarkIndex)}?${searchParams.toString()}`
 }

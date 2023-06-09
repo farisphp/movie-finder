@@ -9,7 +9,7 @@ interface IPagination {
   size: number
 }
 
-function Pagination({ url, totalItems, page, size }: IPagination) {
+function Pagination({ url, totalItems = 0, page, size }: IPagination) {
   const maxPage = Math.ceil(totalItems / size)
   return (
     <div className="flex justify-center space-x-6">
@@ -43,9 +43,7 @@ function Pagination({ url, totalItems, page, size }: IPagination) {
       <Link
         to={generatePageUrl(
           window.location.toString(),
-          page + 1 > (totalItems || 0) / size
-            ? (totalItems || 0) / size
-            : page + 1
+          page + 1 > maxPage ? maxPage : page + 1
         )}
         className={classnames('text-blue-400 hover:underline', {
           hidden: maxPage === page

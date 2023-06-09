@@ -15,6 +15,7 @@ interface IMovieCard extends React.HTMLAttributes<HTMLDivElement> {
   isLoading?: boolean
 }
 
+/* Will render skeleton loading when isLoading is true */
 function MovieCard({
   className,
   image,
