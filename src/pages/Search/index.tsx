@@ -9,7 +9,9 @@ import { useQuery } from 'react-query'
 import { searchMovies } from 'apis/movies'
 import SearchInput from 'components/SearchInput'
 import MovieCard from 'components/MovieCard'
-import { generatePageUrl, generatePagination, generatePosterUrl } from 'utils'
+import Pagination from 'components/Pagination'
+import Logo from 'components/Logo'
+import { generatePosterUrl } from 'utils'
 import { MovieList } from 'types/movie'
 
 const PAGE_SIZE = 20
@@ -44,21 +46,16 @@ function SearchPage() {
   return (
     <div className="mx-auto  min-h-screen max-w-7xl space-y-5 px-5 py-4 xl:px-0">
       <Link to="/">
-        <h1 className="text-center text-4xl font-bold text-blue-950">
-          Movie Finder
-        </h1>
+        <Logo />
       </Link>
-      <form
+      <SearchInput
         onSubmit={(event) => {
           event.preventDefault()
           setSearchParams({ q: searchValue })
         }}
-      >
-        <SearchInput
-          defaultValue={query}
-          onChange={(event) => setSearchValue(event.target.value)}
-        />
-      </form>
+        defaultValue={query}
+        onInputChange={(event) => setSearchValue(event.target.value)}
+      />
       {isLoading ? (
         <Fragment>
           <span className="block w-full font-light">Searching</span>
@@ -95,47 +92,12 @@ function SearchPage() {
               )
             })}
           </div>
-          <div className="flex justify-center space-x-6">
-            <Link
-              to={generatePageUrl(
-                window.location.toString(),
-                page - 1 < 1 ? 1 : page - 1
-              )}
-              className=" text-blue-400 hover:underline"
-            >
-              Prev
-            </Link>
-            <div className="flex justify-center space-x-2">
-              {generatePagination(
-                window.location.toString(),
-                data?.total_results,
-                page,
-                PAGE_SIZE
-              ).map(({ page: pageNumber, pageUrl }) => (
-                <Link key={`page-link-${pageNumber}`} to={pageUrl}>
-                  <span
-                    className={`${
-                      pageNumber !== page ? 'text-blue-400 hover:underline' : ''
-                    }`}
-                  >
-                    {pageNumber}
-                  </span>
-                </Link>
-              ))}
-            </div>
-
-            <Link
-              to={generatePageUrl(
-                window.location.toString(),
-                page + 1 > (data?.total_results || 0) / PAGE_SIZE
-                  ? (data?.total_results || 0) / PAGE_SIZE
-                  : page + 1
-              )}
-              className=" text-blue-400 hover:underline"
-            >
-              Next
-            </Link>
-          </div>
+          <Pagination
+            url={window.location.toString()}
+            totalItems={data?.total_results || 0}
+            page={page}
+            size={PAGE_SIZE}
+          />
         </Fragment>
       )}
     </div>

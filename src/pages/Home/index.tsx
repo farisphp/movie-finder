@@ -1,14 +1,12 @@
 import SearchInput from 'components/SearchInput'
+import Logo from 'components/Logo'
 
 function HomePage() {
   return (
-    <form
-      className="relative mx-auto flex min-h-screen max-w-sm flex-col items-center justify-center space-y-8 px-5 sm:px-0"
-      action="search"
-    >
-      <h1 className="text-4xl font-bold text-blue-950">Movie Finder</h1>
-      <SearchInput />
-    </form>
+    <div className="relative mx-auto flex min-h-screen max-w-sm flex-col items-center justify-center space-y-8 px-5 sm:px-0">
+      <Logo />
+      <SearchInput wrapperClass="w-full" formAction="search" />
+    </div>
   )
 }
 

@@ -14,7 +14,7 @@ export function generatePagination(
   pageToShow = 10
 ) {
   if (!totalItems) return []
-  const maxPage = totalItems / size
+  const maxPage = Math.ceil(totalItems / size)
   const halfPage = pageToShow / 2
   let smallestPage = halfPage < currentPage ? currentPage - halfPage : 1
   let biggestPage =
