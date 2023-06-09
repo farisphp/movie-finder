@@ -1,7 +1,3 @@
-export function classNames(...classes: unknown[]): string {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function generatePosterUrl(
   path: string | undefined,
   size: 'original' | 'w500' | 'w780' = 'original'

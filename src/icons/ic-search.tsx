@@ -1,4 +1,4 @@
-import { classNames } from 'utils'
+import classNames from 'classnames'
 
 function IconSearch({ className = '' }: React.HTMLAttributes<HTMLElement>) {
   return (
