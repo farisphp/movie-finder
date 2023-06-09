@@ -43,6 +43,11 @@ function SearchPage() {
 
   return (
     <div className="mx-auto  min-h-screen max-w-7xl space-y-5 px-5 py-4 xl:px-0">
+      <Link to="/">
+        <h1 className="text-center text-4xl font-bold text-blue-950">
+          Movie Finder
+        </h1>
+      </Link>
       <form
         onSubmit={(event) => {
           event.preventDefault()
