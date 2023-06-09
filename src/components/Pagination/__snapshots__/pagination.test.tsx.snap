@@ -1,0 +1,278 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Pagination /> > should render the pagination with 1 page 1`] = `
+<div
+  class="flex justify-center space-x-6"
+>
+  <a
+    class=" text-blue-400 hover:underline hidden"
+    href="blank?about%3Ablank=&p=1"
+  >
+    Prev
+  </a>
+  <div
+    class="flex justify-center space-x-2"
+  >
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=1"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+    </a>
+  </div>
+  <a
+    class="text-blue-400 hover:underline hidden"
+    href="blank?about%3Ablank=&p=0.5"
+  >
+    Next
+  </a>
+</div>
+`;
+
+exports[`<Pagination /> > should render the pagination with 2 page 1`] = `
+<div
+  class="flex justify-center space-x-6"
+>
+  <a
+    class=" text-blue-400 hover:underline hidden"
+    href="blank?about%3Ablank=&p=1"
+  >
+    Prev
+  </a>
+  <div
+    class="flex justify-center space-x-2"
+  >
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=1"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=2"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        2
+      </span>
+    </a>
+  </div>
+  <a
+    class="text-blue-400 hover:underline"
+    href="blank?about%3Ablank=&p=1.5"
+  >
+    Next
+  </a>
+</div>
+`;
+
+exports[`<Pagination /> > should render the pagination with 10 page 1`] = `
+<div
+  class="flex justify-center space-x-6"
+>
+  <a
+    class=" text-blue-400 hover:underline hidden"
+    href="blank?about%3Ablank=&p=1"
+  >
+    Prev
+  </a>
+  <div
+    class="flex justify-center space-x-2"
+  >
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=1"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=2"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        2
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=3"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        3
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=4"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        4
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=5"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        5
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=6"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        6
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=7"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        7
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=8"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        8
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=9"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        9
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=10"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        10
+      </span>
+    </a>
+  </div>
+  <a
+    class="text-blue-400 hover:underline"
+    href="blank?about%3Ablank=&p=2"
+  >
+    Next
+  </a>
+</div>
+`;
+
+exports[`<Pagination /> > should render the pagination with next link 1`] = `
+<div
+  class="flex justify-center space-x-6"
+>
+  <a
+    class=" text-blue-400 hover:underline hidden"
+    href="blank?about%3Ablank=&p=1"
+  >
+    Prev
+  </a>
+  <div
+    class="flex justify-center space-x-2"
+  >
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=1"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=2"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        2
+      </span>
+    </a>
+  </div>
+  <a
+    class="text-blue-400 hover:underline"
+    href="blank?about%3Ablank=&p=1.5"
+  >
+    Next
+  </a>
+</div>
+`;
+
+exports[`<Pagination /> > should render the pagination with previous link 1`] = `
+<div
+  class="flex justify-center space-x-6"
+>
+  <a
+    class=" text-blue-400 hover:underline"
+    href="blank?about%3Ablank=&p=1"
+  >
+    Prev
+  </a>
+  <div
+    class="flex justify-center space-x-2"
+  >
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=1"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        1
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=2"
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+    </a>
+    <a
+      href="http://127.0.0.1:5173/search?q=naruto&p=3"
+    >
+      <span
+        class="text-blue-400 hover:underline"
+      >
+        3
+      </span>
+    </a>
+  </div>
+  <a
+    class="text-blue-400 hover:underline"
+    href="blank?about%3Ablank=&p=2.5"
+  >
+    Next
+  </a>
+</div>
+`;

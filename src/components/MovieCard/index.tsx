@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classnames from 'classnames'
 
 import {
   Card,
@@ -23,7 +23,7 @@ function MovieCard({
   isLoading = false
 }: IMovieCard) {
   return (
-    <Card className={classNames({ 'animate-pulse': isLoading }, className)}>
+    <Card className={classnames({ 'animate-pulse': isLoading }, className)}>
       <CardContent>
         {isLoading ? (
           <div className="h-[400px] w-full bg-gray-700" />

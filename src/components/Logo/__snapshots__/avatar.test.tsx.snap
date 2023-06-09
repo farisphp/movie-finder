@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Logo /> > should render the logo 1`] = `
+<h1
+  class="text-center text-4xl font-bold text-blue-950"
+>
+  Movie Finder
+</h1>
+`;

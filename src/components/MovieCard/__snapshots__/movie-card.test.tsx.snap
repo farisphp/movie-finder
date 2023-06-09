@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<MovieCard /> > should render the movie detail correctly 1`] = `
+<div
+  class="rounded-lg border bg-card text-card-foreground shadow-sm col-span-12 w-full md:col-span-6 lg:col-span-3"
+>
+  <div
+    class="pb-6"
+  >
+    <img
+      alt="The Movie Out Here"
+      class="h-[400px] w-full"
+      src="https://image.tmdb.org/t/p/w500//x31PQlhtamAz0FP2vprXImB5Yyn.jpg"
+      style="object-fit: cover;"
+    />
+  </div>
+  <div
+    class="space-y-2 p-6 pt-0"
+  >
+    <h3
+      class="text-lg font-semibold leading-normal tracking-tight"
+    >
+      The Movie Out Here
+    </h3>
+    <p
+      class="text-sm text-muted-foreground"
+    >
+      Adam (Robin Nielsen) works as a junior associate for a large Toronto law firm. When a business trip takes him to his hometown of Fernie, he reunites with his old friends, Jason (Viv Leacock) and Theo (James Wallis). Adam gets more than he bargained for when he finds out that, due to a series of terrible business decisions, Theo's ski waxing business "Waxopolis" is in serious financial trouble and at risk of being taken over by an evil developer. The three guys hatch a plan to throw a massive fundraising party to try and save the business. But, with the developer and his son on their back, party permit hassles, and a Sasquatch on the loose, will they be able to pull it off?
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MovieCard /> > should render the skeleton loading of movie card 1`] = `
+<div
+  class="rounded-lg border bg-card text-card-foreground shadow-sm animate-pulse col-span-12 w-full md:col-span-6 lg:col-span-3"
+>
+  <div
+    class="pb-6"
+  >
+    <div
+      class="h-[400px] w-full bg-gray-700"
+    />
+  </div>
+  <div
+    class="space-y-2 p-6 pt-0"
+  >
+    <h3
+      class="text-lg font-semibold leading-normal tracking-tight"
+    />
+    <p
+      class="text-sm text-muted-foreground"
+    />
+  </div>
+</div>
+`;
