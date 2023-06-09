@@ -1,42 +1,59 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
+![reactjs-vite-tailwindcss-boilerplate](https://github.com/farisphp/movie-finder/blob/main/preview/preview-home.png)
 
 # React Tailwindcss Boilerplate build with Vite
-
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
-
-## What is inside?
-
-This project uses many tools like:
-
+React Movie Finder with [TheMovieDB API](https://www.themoviedb.org/) <br><br>
+This website is build with 
 - [Vite](https://vitejs.dev)
 - [ReactJS](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
+- [React Query](https://tanstack.com/query/v4/docs/react/overview)
+- [React Router Dom](https://reactrouter.com/en/main)
 - [Vitest](https://vitest.dev)
 - [Testing Library](https://testing-library.com)
 - [Tailwindcss](https://tailwindcss.com)
 - [Eslint](https://eslint.org)
 - [Prettier](https://prettier.io)
 
+## What is inside?
+
+### Movie List
+![reactjs-vite-tailwindcss-boilerplate](https://github.com/farisphp/movie-finder/blob/main/preview/preview-search-2.png)
+
+### Skeleton Loading
+![reactjs-vite-tailwindcss-boilerplate](https://github.com/farisphp/movie-finder/blob/main/preview/preview-skeleton.png)
+
+### Advanced Pagination
+![image](https://github.com/farisphp/movie-finder/assets/22131960/1be90279-6ecb-4ec4-b674-f057fc4ecf9a)
+
+
+### 
+
 ## Getting Started
 
 ### Install
 
-Create the project.
+Clone the project.
 
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
+```
+git clone https://github.com/farisphp/movie-finder.git
 ```
 
 Access the project directory.
 
 ```bash
-cd my-app
+cd movie-finder
 ```
 
 Install dependencies.
 
 ```bash
 pnpm install
+```
+
+Copy .env.example and update .env value to your creds
+
+```
+cp .env.example .env
 ```
 
 Serve with hot reload at <http://localhost:5173>.
